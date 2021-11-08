@@ -1,5 +1,7 @@
-public abstract class Beverage {
-    String description = "Unknown Beverage";
+package MyDemoCode;
+
+public abstract class Drink {
+    String description = "Unknown Drink";
 
     public String getDescription() {
         return description;

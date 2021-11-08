@@ -1,3 +1,5 @@
+package HeadFirstCode;
+
 public class Caramel extends AddonDecorator {
     public Caramel(Beverage beverage) {
         this.beverage = beverage;

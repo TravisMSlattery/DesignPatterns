@@ -1,3 +1,5 @@
+package HeadFirstCode;
+
 public class Whip extends AddonDecorator {
     public Whip(Beverage beverage) {
         this.beverage = beverage;

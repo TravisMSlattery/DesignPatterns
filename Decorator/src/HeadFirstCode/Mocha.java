@@ -1,3 +1,5 @@
+package HeadFirstCode;
+
 public class Mocha extends AddonDecorator {
     public Mocha(Beverage beverage) {
         this.beverage = beverage;

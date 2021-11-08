@@ -1,3 +1,5 @@
+package HeadFirstCode;
+
 public class Milk extends AddonDecorator {
     public Milk(Beverage beverage) {
         this.beverage = beverage;
