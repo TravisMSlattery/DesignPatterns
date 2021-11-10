@@ -1,5 +1,9 @@
 package MyDemoCode;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class ChocolateIceCream extends IceCreamDecorator {
 
 
@@ -8,10 +12,17 @@ public class ChocolateIceCream extends IceCreamDecorator {
     }
 
     @Override
-    public double getCost() {
-        System.out.println("Adding a scoop of Chocolate Ice-Cream!");
-        return 1.0 + super.getCost();
+    public List<String> getAddons() {
+        List<String> list = new ArrayList<>(tempIceCream.getAddons());
+        list.add("Scoop of Chocolate");
+        return Collections.unmodifiableList(list);
+    }
 
+
+    @Override
+    public double getCost() {
+
+        return  tempIceCream.getCost() + Pricing.chocolatePrice.price;
     }
 
 

@@ -10,17 +10,17 @@ public class BasicIceCream implements IceCream {
     @Override
     public List<String> getAddons() {
         List<String> list = new ArrayList<>();
-        list.add("Basic Icecream");
+        list.add("Single Scoop Ice-Cream");
         return Collections.unmodifiableList(list);
     }
 
     @Override
     public String getDescription() {
-        return "Creating a single scoop IceCream";
+        return "Creating a single scoop Ice-Cream";
     }
 
     @Override
     public double getCost() {
-        return 0.50;
+        return Pricing.singleScoop.price;
     }
 }

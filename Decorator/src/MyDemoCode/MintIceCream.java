@@ -12,7 +12,7 @@ public class MintIceCream extends IceCreamDecorator {
     @Override
     public List<String> getAddons() {
         List<String> list = new ArrayList<>(tempIceCream.getAddons());
-        list.add("Mint Cream");
+        list.add("Scoop of Mint");
         return Collections.unmodifiableList(list);
     }
 
@@ -20,6 +20,6 @@ public class MintIceCream extends IceCreamDecorator {
     @Override
     public double getCost() {
 
-        return  tempIceCream.getCost() + 2.1;
+        return  tempIceCream.getCost() + Pricing.mintPrice.price;
     }
 }

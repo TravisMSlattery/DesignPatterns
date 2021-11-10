@@ -17,9 +17,9 @@ public abstract class IceCreamDecorator implements IceCream {
         String separator = "";
         for (String s : getAddons()) {
             description.append(separator).append(s);
-            separator=", ";
+            separator = ", ";
         }
-        description.append(".");
+        description.append(":");
         return description.toString();
     }
     public IceCreamDecorator(IceCream iceCream) {
