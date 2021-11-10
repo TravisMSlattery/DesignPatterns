@@ -1,20 +1,39 @@
 package MyDemoCode;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public class IceCreamDecorator implements IceCream {
+public abstract class IceCreamDecorator implements IceCream {
 
-    private IceCream iceCream;
+    protected IceCream tempIceCream;
 
-    List<IceCream> iceCreamList = new ArrayList();
-
-    public IceCreamDecorator(IceCream iceCream) {
-        iceCreamList.add(iceCream);
+    public List<String> getAddons() {
+        return Collections.emptyList();
     }
 
+
+    public String getDescription() {
+        StringBuilder description = new StringBuilder();
+        String separator = "";
+        for (String s : getAddons()) {
+            description.append(separator).append(s);
+            separator=", ";
+        }
+        description.append(".");
+        return description.toString();
+    }
+    public IceCreamDecorator(IceCream iceCream) {
+
+        tempIceCream = iceCream;
+    }
+
+//    @Override
+//    public String getDescription() {
+//        return tempIceCream.getDescription();
+//    }
+
     @Override
-    public double cost() {
-        return this.iceCream.cost();
+    public double getCost() {
+        return tempIceCream.getCost();
     }
 }

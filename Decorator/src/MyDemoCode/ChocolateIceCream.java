@@ -8,9 +8,9 @@ public class ChocolateIceCream extends IceCreamDecorator {
     }
 
     @Override
-    public double cost() {
+    public double getCost() {
         System.out.println("Adding a scoop of Chocolate Ice-Cream!");
-        return 1.0 + super.cost();
+        return 1.0 + super.getCost();
 
     }
 

@@ -5,16 +5,11 @@ public class Main {
     public static void main(String[] args) {
 
         IceCream basicIceCream = new BasicIceCream();
-        System.out.println("First scoop of Ice-cream cost €" + basicIceCream.cost());
+        System.out.println(basicIceCream.getDescription());
 
-        //Add Vanilla to the order
-        IceCream vanilla = new VanillaIceCream(basicIceCream); // wrapping vanilla
-        System.out.println("Extra cost for Vanilla is: €" + vanilla.cost());
+        basicIceCream = new VanillaIceCream(basicIceCream);
+        System.out.println(basicIceCream.getDescription() + "::" + basicIceCream.getCost());
 
-
-        //Add Mint to the order
-        IceCream mint = new MintIceCream(vanilla); // wrapping mint
-        System.out.println("Extra cost for Mint is: €" + mint.cost());
 
 
     }

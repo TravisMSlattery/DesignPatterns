@@ -1,5 +1,9 @@
 package MyDemoCode;
 
+import java.util.List;
+
 public interface IceCream {
-    double cost();
+    List<String> getAddons();
+    String getDescription();
+    double getCost();
 }
