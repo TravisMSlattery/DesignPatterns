@@ -20,6 +20,6 @@ public class MintIceCream extends IceCreamDecorator {
     @Override
     public double getCost() {
 
-        return  tempIceCream.getCost() + Pricing.mintPrice.price;
+        return  tempIceCream.getCost() + Price.mintPrice.price;
     }
 }

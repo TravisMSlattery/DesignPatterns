@@ -21,6 +21,6 @@ public class BasicIceCream implements IceCream {
 
     @Override
     public double getCost() {
-        return Pricing.singleScoop.price;
+        return Price.singleScoop.price;
     }
 }

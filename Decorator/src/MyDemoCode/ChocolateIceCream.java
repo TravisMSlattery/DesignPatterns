@@ -22,7 +22,7 @@ public class ChocolateIceCream extends IceCreamDecorator {
     @Override
     public double getCost() {
 
-        return  tempIceCream.getCost() + Pricing.chocolatePrice.price;
+        return  tempIceCream.getCost() + Price.chocolatePrice.price;
     }
 
 
