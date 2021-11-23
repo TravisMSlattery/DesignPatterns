@@ -1,0 +1,269 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": ""
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false // root node is included
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "AddonDecorator"
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_139714863 { 
+   	label=DarkRoast
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   DarkRoast139714863[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)DarkRoast</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ cost(): double</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_1551447557 { 
+   	label=AddonDecorator
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   AddonDecorator1551447557[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)AddonDecorator</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   beverage: Beverage [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_1979931807 { 
+   	label=Beverage
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Beverage1979931807[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Beverage</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   description: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ cost(): double</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_2001560870 { 
+   	label=Espresso
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Espresso2001560870[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Espresso</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ cost(): double</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_2076456057 { 
+   	label=Caramel
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Caramel2076456057[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Caramel</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ cost(): double</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_2398267 { 
+   	label=Milk
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Milk2398267[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Milk</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ cost(): double</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_2695128 { 
+   	label=Whip
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Whip2695128[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Whip</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ cost(): double</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_338151119 { 
+   	label=HouseBlend
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   HouseBlend338151119[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)HouseBlend</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ cost(): double</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_74516378 { 
+   	label=Mocha
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Mocha74516378[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Mocha</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ cost(): double</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+'edges    
+AddonDecorator1551447557 -> Beverage1979931807[label="beverage
+[0..1]"];
+AddonDecorator1551447557 -> Caramel2076456057[arrowhead=none, arrowtail=empty, dir=both];
+AddonDecorator1551447557 -> Milk2398267[arrowhead=none, arrowtail=empty, dir=both];
+AddonDecorator1551447557 -> Mocha74516378[arrowhead=none, arrowtail=empty, dir=both];
+AddonDecorator1551447557 -> Whip2695128[arrowhead=none, arrowtail=empty, dir=both];
+Beverage1979931807 -> AddonDecorator1551447557[arrowhead=none, arrowtail=empty, dir=both];
+Beverage1979931807 -> DarkRoast139714863[arrowhead=none, arrowtail=empty, dir=both];
+Beverage1979931807 -> Espresso2001560870[arrowhead=none, arrowtail=empty, dir=both];
+Beverage1979931807 -> HouseBlend338151119[arrowhead=none, arrowtail=empty, dir=both];
+    
+}
+@enduml
