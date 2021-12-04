@@ -14,6 +14,10 @@ public class Main {
         basicIceCream2 = new ChocolateIceCream(new MintIceCream(new VanillaIceCream(basicIceCream2)));
         System.out.println(basicIceCream2.getDescription() + " €" + basicIceCream2.getCost());
 
+        IceCream IceCreamCone = new IceCreamCone();
+        IceCreamCone = new Sprinkles(new MintIceCream(new ChocolateIceCream(IceCreamCone)));
+        System.out.println(IceCreamCone.getDescription() + " €" + basicIceCream2.getCost());
+
 
 
     }

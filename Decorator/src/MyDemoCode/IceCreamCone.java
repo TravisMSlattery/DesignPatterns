@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class BasicIceCream implements IceCream {
+public class IceCreamCone implements IceCream {
 
 
     @Override
     public List<String> getAddons() {
         List<String> list = new ArrayList<>();
-        list.add("Single Scoop Ice-Cream in a bowl");
+        list.add("Single Scoop Ice-Cream waffle cone");
         return Collections.unmodifiableList(list);
     }
 
     @Override
     public String getDescription() {
-        return "Creating a single scoop Ice-Cream in a bowl";
+        return "Creating a single scoop Ice-Cream waffle cone";
     }
 
     @Override
