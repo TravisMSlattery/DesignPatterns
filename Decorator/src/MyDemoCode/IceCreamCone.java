@@ -1,5 +1,7 @@
 package MyDemoCode;
 
+import OldCode.ChocolateIceCream;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -15,7 +17,7 @@ public class IceCreamCone implements IceCream {
     }
 
     @Override
-    public String getDescription() {
+    public String getDescription(ChocolateIceCream chocolateIceCream) {
         return "Creating a single scoop Ice-Cream waffle cone";
     }
 

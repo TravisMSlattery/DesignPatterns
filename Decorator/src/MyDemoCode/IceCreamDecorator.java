@@ -1,5 +1,7 @@
 package MyDemoCode;
 
+import OldCode.ChocolateIceCream;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -12,7 +14,7 @@ public abstract class IceCreamDecorator implements IceCream {
     }
 
 
-    public String getDescription() {
+    public String getDescription(ChocolateIceCream chocolateIceCream) {
         StringBuilder description = new StringBuilder();
         String separator = "";
         for (String s : getAddons()) {
