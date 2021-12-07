@@ -1,6 +1,5 @@
 package MyDemoCode;
 
-import OldCode.ChocolateIceCream;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,11 +13,6 @@ public class IceCreamCone implements IceCream {
         List<String> list = new ArrayList<>();
         list.add("Single Scoop Ice-Cream waffle cone");
         return Collections.unmodifiableList(list);
-    }
-
-    @Override
-    public String getDescription(ChocolateIceCream chocolateIceCream) {
-        return "Creating a single scoop Ice-Cream waffle cone";
     }
 
     @Override

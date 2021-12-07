@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Sprinkles extends ToppingsDecorator {
+public abstract class Sprinkles extends ToppingsDecorator {
     public Sprinkles(IceCream iceCream) {
         super(iceCream);
 
@@ -19,6 +19,6 @@ public class Sprinkles extends ToppingsDecorator {
     @Override
     public double getCost() {
 
-        return  tempIceCream.getCost() + Price.mintPrice.price;
+        return  tempIceCream.getCost() + Price.toppingsPrice.price;
     }
 }

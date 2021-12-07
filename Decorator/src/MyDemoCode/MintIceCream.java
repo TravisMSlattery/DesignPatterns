@@ -16,7 +16,6 @@ public class MintIceCream extends IceCreamDecorator {
         return Collections.unmodifiableList(list);
     }
 
-
     @Override
     public double getCost() {
 

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Nuts extends ToppingsDecorator {
+public abstract class Nuts extends ToppingsDecorator {
     public Nuts(IceCream iceCream) {
         super(iceCream);
 
@@ -20,6 +20,6 @@ public class Nuts extends ToppingsDecorator {
     @Override
     public double getCost() {
 
-        return  tempIceCream.getCost() + Price.mintPrice.price;
+        return  tempIceCream.getCost() + Price.toppingsPrice.price;
     }
 }

@@ -1,6 +1,5 @@
 package MyDemoCode;
 
-import OldCode.ChocolateIceCream;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,10 +15,7 @@ public class BasicIceCream implements IceCream {
         return Collections.unmodifiableList(list);
     }
 
-    @Override
-    public String getDescription(ChocolateIceCream chocolateIceCream) {
-        return "Creating a single scoop Ice-Cream in a bowl";
-    }
+
 
     @Override
     public double getCost() {
