@@ -15,10 +15,14 @@ public class BasicIceCream implements IceCream {
         return Collections.unmodifiableList(list);
     }
 
+    @Override
+    public String getDescription() {
+        return "Single Scoop Ice-Cream in a bowl";
+    }
 
 
     @Override
     public double getCost() {
-        return Price.singleScoop.price;
+        return Price.SINGLE_SCOOP.price;
     }
 }

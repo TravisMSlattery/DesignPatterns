@@ -16,7 +16,12 @@ public class IceCreamCone implements IceCream {
     }
 
     @Override
+    public String getDescription() {
+        return null;
+    }
+
+    @Override
     public double getCost() {
-        return Price.singleScoop.price;
+        return Price.SINGLE_SCOOP.price;
     }
 }

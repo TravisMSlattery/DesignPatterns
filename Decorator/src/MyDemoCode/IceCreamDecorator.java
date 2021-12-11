@@ -2,19 +2,23 @@ package MyDemoCode;
 
 import OldCode.ChocolateIceCream;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public abstract class IceCreamDecorator implements IceCream {
 
     protected IceCream tempIceCream;
+    protected String description;
 
     public List<String> getAddons() {
-        return Collections.emptyList();
+        List<String> list = new ArrayList<>(tempIceCream.getAddons());
+        list.add(description);
+        return Collections.unmodifiableList(list);
     }
 
-
-    public String getDescription(ChocolateIceCream chocolateIceCream) {
+    @Override
+    public String getDescription() {
         StringBuilder description = new StringBuilder();
         String separator = "";
         for (String s : getAddons()) {

@@ -7,8 +7,6 @@ public class Main {
         IceCream basicIceCream = new BasicIceCream();
         System.out.println(basicIceCream.getDescription() + " €" + basicIceCream.getCost());
 
-       basicIceCream = new VanillaIceCream(basicIceCream);
-        System.out.println(basicIceCream.getDescription() + " €" + basicIceCream.getCost());
 
         IceCream basicIceCream2 = new BasicIceCream();
         basicIceCream2 = new Nuts(new ChocolateIceCream(new MintIceCream(new VanillaIceCream(basicIceCream2))));
