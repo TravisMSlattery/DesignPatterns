@@ -1,0 +1,39 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class BasicIceCream{
+    + getDescription() : String
+    + getCost() : Double
+}
+class IceCreamCone{
+    + getDescription() : String
+    + getCost() : Double
+}
+
+class MintIceCream{
+    + getDescription() : String
+    + getCost() : Double
+}
+class MintIceCreamNuts{
+    + getDescription() : String
+    + getCost() : Double
+ }
+class MintIceCreamSprinkles{
+    + getDescription() : String
+    + getCost() : Double
+ }
+
+
+class MintIceCreamConeSprinkles{
+    + getDescription() : String
+    + getCost() : Double
+ }
+
+
+BasicIceCream <|-- MintIceCream
+BasicIceCream <|-- MintIceCreamSprinkles
+BasicIceCream <|-- MintIceCreamNuts
+IceCreamCone <|-- MintIceCream
+IceCreamCone <|-- MintIceCreamConeSprinkles
+
+@enduml
