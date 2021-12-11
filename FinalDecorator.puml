@@ -1,0 +1,58 @@
+@startuml
+skinparam classAttributeIconSize 0
+class MyDemoCode.BasicIceCream {
++ List<String> getAddons()
++ String getDescription()
++ double getCost()
+}
+class MyDemoCode.IceCreamCone {
++ List<String> getAddons()
++ String getDescription()
++ double getCost()
+}
+class MyDemoCode.Nuts {
++ double getCost()
+}
+class MyDemoCode.MintIceCream {
++ double getCost()
+}
+class MyDemoCode.ChocolateIceCream {
++ double getCost()
+}
+class MyDemoCode.VanillaIceCream {
++ double getCost()
+}
+interface MyDemoCode.IceCream {
+~ List<String> getAddons()
+~ String getDescription()
+~ double getCost()
+}
+class MyDemoCode.Sprinkles {
++ double getCost()
+}
+abstract class MyDemoCode.ToppingsDecorator {
+# IceCream tempIceCream
+# String description
++ List<String> getAddons()
++ String getDescription()
++ double getCost()
+}
+abstract class MyDemoCode.IceCreamDecorator {
+# IceCream tempIceCream
+# String description
++ List<String> getAddons()
++ String getDescription()
++ double getCost()
+}
+
+
+MyDemoCode.IceCream <|.. MyDemoCode.BasicIceCream
+MyDemoCode.IceCream <|.. MyDemoCode.IceCreamCone
+MyDemoCode.ToppingsDecorator <|-- MyDemoCode.Nuts
+MyDemoCode.IceCreamDecorator <|-- MyDemoCode.MintIceCream
+MyDemoCode.IceCreamDecorator <|-- MyDemoCode.ChocolateIceCream
+MyDemoCode.IceCreamDecorator <|-- MyDemoCode.VanillaIceCream
+MyDemoCode.ToppingsDecorator <|-- MyDemoCode.Sprinkles
+MyDemoCode.IceCream <|.. MyDemoCode.ToppingsDecorator
+MyDemoCode.IceCream <|.. MyDemoCode.IceCreamDecorator
+@enduml
